@@ -1,5 +1,8 @@
-const initialState = [];
+import { combineReducers } from 'redux';
+import countriesReducer from './countriesReducer';
 
-const rootReducer = (state = initialState, action) => state;
+const rootReducer = combineReducers({
+  countries: countriesReducer,
+});
 
 export default rootReducer;
