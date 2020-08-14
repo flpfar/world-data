@@ -5,8 +5,8 @@ import getCountries from '../../actions/countries';
 const Home = () => {
   const dispatch = useDispatch();
 
-  function list(){
-    dispatch(getCountries())
+  function list() {
+    dispatch(getCountries());
   }
 
   return (

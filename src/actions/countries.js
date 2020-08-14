@@ -1,11 +1,17 @@
 import axios from 'axios';
+import { LOADING_COUNTRIES, COUNTRIES_LOADED } from '../constants/actions';
 
-export const getCountries = () => async dispatch => {
+const getCountries = () => async dispatch => {
   dispatch({
-    type: 'LOADING_COUNTRIES',
+    type: LOADING_COUNTRIES,
   });
-  const countries = await axios.get('https://restcountries.eu/rest/v2/all');
-  console.log(countries);
+
+  const response = await axios.get('https://restcountries.eu/rest/v2/all');
+
+  dispatch({
+    type: COUNTRIES_LOADED,
+    payload: response.data,
+  });
 };
 
 export default getCountries;
