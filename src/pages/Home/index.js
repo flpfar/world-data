@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import getCountries from '../../actions/countries';
+import setContinentFilter from '../../actions/filter';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -27,10 +28,7 @@ const Home = () => {
   }, [selectedFilter, state.countries]);
 
   function handleSelectedFilter(e) {
-    dispatch({
-      type: 'SET_FILTER',
-      payload: { filter: e.target.value },
-    });
+    dispatch(setContinentFilter(e.target.value));
   }
 
   return (
