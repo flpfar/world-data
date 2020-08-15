@@ -26,19 +26,24 @@ const Home = () => {
     );
   }, [selectedFilter, state.countries]);
 
-  function handleSouth(aeae) {
+  function handleSelectedFilter(e) {
     dispatch({
       type: 'SET_FILTER',
-      payload: { filter: aeae },
+      payload: { filter: e.target.value },
     });
   }
 
   return (
     <div className="Home">
       {state.loading ? 'Loading' : ''}
-      {continents.map(i => i)}
-      <button type="button" onClick={() => handleSouth('Americas')}>Americas</button>
-      <button type="button" onClick={() => handleSouth('Polar')}>Asia</button>
+      <select value={selectedFilter} onChange={handleSelectedFilter}>
+        <option value="All">All</option>
+        {continents.map(continent => (
+          <option value={continent} key={continent}>
+            {continent === '' ? 'No continent' : continent}
+          </option>
+        ))}
+      </select>
       {filteredCountries.map(country => (
         <div key={country.name}>
           <Link to={`/${country.name}`}>{country.name}</Link>
