@@ -5,13 +5,15 @@ import {
 
 import Home from './pages/Home';
 import Country from './pages/Country';
+import Page404 from './pages/Page404';
 
 const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/" component={Home} exact />
-      <Route path="/:country" component={Country} exact />
-      <Redirect to="/" />
+      <Route path="/Page404" component={Page404} exact />
+      <Route path="/:countryName" component={Country} exact />
+      <Redirect to="/Page404" />
     </Switch>
   </BrowserRouter>
 );

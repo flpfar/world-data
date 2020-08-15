@@ -26,8 +26,6 @@ const Home = () => {
     );
   }, [selectedFilter, state.countries]);
 
-  console.log('AE');
-
   function handleSouth(aeae) {
     dispatch({
       type: 'SET_FILTER',
