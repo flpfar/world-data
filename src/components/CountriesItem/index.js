@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CountriesItem = ({ country }) => {
   const { name, population } = country;
@@ -8,6 +9,13 @@ const CountriesItem = ({ country }) => {
       {population}
     </div>
   );
+};
+
+CountriesItem.propTypes = {
+  country: PropTypes.shape({
+    name: PropTypes.string,
+    population: PropTypes.number,
+  }).isRequired,
 };
 
 export default CountriesItem;
