@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import NumberFormat from 'react-number-format';
 import CountriesItem from '../CountriesItem';
+import styles from './styles.module.css';
 
 const CountriesList = ({ countries, selectedFilter }) => {
   function totalPopulation(countries) {
@@ -18,7 +18,7 @@ const CountriesList = ({ countries, selectedFilter }) => {
   }
 
   return (
-    <div className="CountriesList">
+    <div className={styles.CountriesList}>
       <h1>{selectedFilter === 'All' ? 'World' : selectedFilter }</h1>
       <p>
         Population:
@@ -28,11 +28,11 @@ const CountriesList = ({ countries, selectedFilter }) => {
           thousandSeparator
         />
       </p>
-      {filteredCountries().map(country => (
-        <Link to={`/${country.name}`} key={country.name}>
-          <CountriesItem country={country} />
-        </Link>
-      ))}
+      <div className={styles.ListContainer}>
+        {filteredCountries().map(country => (
+          <CountriesItem country={country} key={country.name} />
+        ))}
+      </div>
     </div>
   );
 };

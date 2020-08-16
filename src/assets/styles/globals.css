@@ -1,0 +1,12 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+}
+
+:root {
+  --color-primary: #444;
+  --color-secondary: #bee3db;
+  --color-bg: #eee;
+  --color-bg-darker: #ccc;
+  --color-bg-item: #fff;
+}
