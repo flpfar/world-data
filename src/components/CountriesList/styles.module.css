@@ -10,6 +10,10 @@
   margin: 0.5rem;
 }
 
+.CountriesList p + p {
+  margin-top: 0.4rem;
+}
+
 .ListContainer {
   max-width: 95%;
   margin: 0 auto;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import getCountries from '../../actions/countries';
 import setContinentFilter from '../../actions/filter';
 import CountriesList from '../../components/CountriesList';
 import Navbar from '../../components/Navbar';
@@ -13,11 +12,7 @@ const Home = () => {
   const [continents, setContinents] = useState([]);
 
   useEffect(() => {
-    dispatch(getCountries());
-  }, [dispatch]);
-
-  useEffect(() => {
-    setContinents(['All', ...new Set(state.countries.map(item => item.region).sort())]);
+    setContinents(['All', ...new Set(state.countries.map(item => item.region))]);
   }, [state.countries]);
 
   function handleSelectedFilter(e) {

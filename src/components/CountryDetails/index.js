@@ -23,7 +23,7 @@ const CountryDetails = ({ country }) => {
             <NumberFormat value={area} displayType="text" thousandSeparator />
           </li>
           <li>
-            <strong>Population Density(pop./km²):</strong>
+            <strong>Population Density(pop/km²):</strong>
             <NumberFormat value={population / area} decimalScale={2} displayType="text" thousandSeparator />
           </li>
           <li>

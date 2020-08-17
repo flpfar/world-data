@@ -7,7 +7,7 @@ import styles from './styles.module.css';
 const CountriesList = ({ countries, selectedFilter }) => {
   const filteredCountries = (
     selectedFilter === 'All'
-      ? countries
+      ? [...countries]
       : countries.filter(country => country.region === selectedFilter)
   );
 
@@ -18,6 +18,12 @@ const CountriesList = ({ countries, selectedFilter }) => {
     <div className={styles.CountriesList}>
       <header>
         <h1>{selectedFilter === 'All' ? 'World' : selectedFilter }</h1>
+        <p>
+          <span>Total countries: </span>
+          <strong>
+            {filteredCountries.length}
+          </strong>
+        </p>
         <p>
           <span>Total population: </span>
           <strong>

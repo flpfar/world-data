@@ -5,6 +5,7 @@
   border-radius: 0.4rem;
   color: var(--color-primary);
   padding: 2rem;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .CountryDetails h1 {
