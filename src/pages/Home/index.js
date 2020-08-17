@@ -4,6 +4,7 @@ import getCountries from '../../actions/countries';
 import setContinentFilter from '../../actions/filter';
 import CountriesList from '../../components/CountriesList';
 import Navbar from '../../components/Navbar';
+import styles from './styles.module.css';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -24,18 +25,21 @@ const Home = () => {
   }
 
   return (
-    <div className="Home">
+    <div className={styles.Home}>
       <Navbar />
-      {state.loading ? 'Loading' : ''}
-      { selectedFilter }
-      <select value={selectedFilter} onChange={handleSelectedFilter}>
-        {continents.map(continent => (
-          <option value={continent} key={continent}>
-            {continent === '' ? 'No continent' : continent}
-          </option>
-        ))}
-      </select>
-      <CountriesList countries={state.countries} selectedFilter={selectedFilter} />
+      <div className={styles.FiltersContainer}>
+        <span>Region:</span>
+        <select value={selectedFilter} onChange={handleSelectedFilter}>
+          {continents.map(continent => (
+            <option value={continent} key={continent}>
+              {continent === '' ? 'No continent' : continent}
+            </option>
+          ))}
+        </select>
+      </div>
+      {state.loading
+        ? <span className={styles.Loading}>Loading...</span>
+        : <CountriesList countries={state.countries} selectedFilter={selectedFilter} />}
     </div>
   );
 };

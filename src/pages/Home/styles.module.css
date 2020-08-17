@@ -1,0 +1,24 @@
+.FiltersContainer {
+  background-color: var(--color-bg);
+  height: 2.5rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5%;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.FiltersContainer span {
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+}
+
+.Loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
