@@ -17,8 +17,8 @@ const Home = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    setContinents(['All', ...new Set(state.countries.map(item => item.region))]);
-  }, [state]);
+    setContinents(['All', ...new Set(state.countries.map(item => item.region).sort())]);
+  }, [state.countries]);
 
   function handleSelectedFilter(e) {
     dispatch(setContinentFilter(e.target.value));

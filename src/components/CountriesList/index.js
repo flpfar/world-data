@@ -5,17 +5,14 @@ import CountriesItem from '../CountriesItem';
 import styles from './styles.module.css';
 
 const CountriesList = ({ countries, selectedFilter }) => {
-  function totalPopulation(countries) {
-    return countries.reduce((total, country) => total + country.population, 0);
-  }
+  const filteredCountries = (
+    selectedFilter === 'All'
+      ? countries
+      : countries.filter(country => country.region === selectedFilter)
+  );
 
-  function filteredCountries() {
-    return (
-      selectedFilter === 'All'
-        ? countries
-        : countries.filter(country => country.region === selectedFilter)
-    );
-  }
+  const totalPopulation = filteredCountries
+    .reduce((total, country) => total + country.population, 0);
 
   return (
     <div className={styles.CountriesList}>
@@ -25,7 +22,7 @@ const CountriesList = ({ countries, selectedFilter }) => {
           <span>Total population: </span>
           <strong>
             <NumberFormat
-              value={totalPopulation(filteredCountries())}
+              value={totalPopulation}
               displayType="text"
               thousandSeparator
             />
@@ -33,7 +30,7 @@ const CountriesList = ({ countries, selectedFilter }) => {
         </p>
       </header>
       <div className={styles.ListContainer}>
-        {filteredCountries().map(country => (
+        {filteredCountries.map(country => (
           <CountriesItem country={country} key={country.name} />
         ))}
       </div>
