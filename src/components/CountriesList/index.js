@@ -19,15 +19,19 @@ const CountriesList = ({ countries, selectedFilter }) => {
 
   return (
     <div className={styles.CountriesList}>
-      <h1>{selectedFilter === 'All' ? 'World' : selectedFilter }</h1>
-      <p>
-        Population:
-        <NumberFormat
-          value={totalPopulation(filteredCountries())}
-          displayType="text"
-          thousandSeparator
-        />
-      </p>
+      <header>
+        <h1>{selectedFilter === 'All' ? 'World' : selectedFilter }</h1>
+        <p>
+          <span>Total population: </span>
+          <strong>
+            <NumberFormat
+              value={totalPopulation(filteredCountries())}
+              displayType="text"
+              thousandSeparator
+            />
+          </strong>
+        </p>
+      </header>
       <div className={styles.ListContainer}>
         {filteredCountries().map(country => (
           <CountriesItem country={country} key={country.name} />

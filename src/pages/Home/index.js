@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import getCountries from '../../actions/countries';
 import setContinentFilter from '../../actions/filter';
 import CountriesList from '../../components/CountriesList';
+import Navbar from '../../components/Navbar';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <div className="Home">
+      <Navbar />
       {state.loading ? 'Loading' : ''}
       { selectedFilter }
       <select value={selectedFilter} onChange={handleSelectedFilter}>
