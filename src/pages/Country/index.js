@@ -30,7 +30,8 @@ const Country = () => {
       <Navbar back />
       <div className={styles.Country}>
         { notFound && <Redirect to="/Page404" /> }
-        { loading ? 'Loading' : <CountryDetails country={country} /> }
+        { loading ? <span className={styles.Loading}>Loading...</span>
+          : <CountryDetails country={country} /> }
       </div>
     </>
   );
