@@ -4,18 +4,18 @@
   margin-top: 3rem;
   border-radius: 0.4rem;
   color: var(--color-primary);
+  padding: 2rem;
 }
 
 .CountryDetails h1 {
   font-size: 1.6rem;
   text-align: center;
-  padding-top: 2rem;
 }
 
 .CountryDetails img {
-  width: 20rem;
-  height: 20rem;
+  max-width: 20rem;
   object-fit: contain;
+  margin: 2rem 0;
 }
 
 .DetailsContent {
