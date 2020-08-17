@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Redirect, Link } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import CountryDetails from '../../components/CountryDetails';
+import Navbar from '../../components/Navbar';
 
 const Country = () => {
   const { countryName } = useParams();
@@ -24,11 +25,13 @@ const Country = () => {
   }, [countryName]);
 
   return (
-    <div className="Country">
-      { notFound && <Redirect to="/Page404" /> }
-      { loading ? 'Loading' : <CountryDetails country={country} /> }
-      <Link to="/">Voltar</Link>
-    </div>
+    <>
+      <Navbar back />
+      <div className="Country">
+        { notFound && <Redirect to="/Page404" /> }
+        { loading ? 'Loading' : <CountryDetails country={country} /> }
+      </div>
+    </>
   );
 };
 

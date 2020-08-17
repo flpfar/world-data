@@ -25,22 +25,24 @@ const Home = () => {
   }
 
   return (
-    <div className={styles.Home}>
+    <>
       <Navbar />
-      <div className={styles.FiltersContainer}>
-        <span>Region:</span>
-        <select value={selectedFilter} onChange={handleSelectedFilter}>
-          {continents.map(continent => (
-            <option value={continent} key={continent}>
-              {continent === '' ? 'No continent' : continent}
-            </option>
-          ))}
-        </select>
+      <div className={styles.Home}>
+        <div className={styles.FiltersContainer}>
+          <span>Region:</span>
+          <select value={selectedFilter} onChange={handleSelectedFilter}>
+            {continents.map(continent => (
+              <option value={continent} key={continent}>
+                {continent === '' ? 'No continent' : continent}
+              </option>
+            ))}
+          </select>
+        </div>
+        {state.loading
+          ? <span className={styles.Loading}>Loading...</span>
+          : <CountriesList countries={state.countries} selectedFilter={selectedFilter} />}
       </div>
-      {state.loading
-        ? <span className={styles.Loading}>Loading...</span>
-        : <CountriesList countries={state.countries} selectedFilter={selectedFilter} />}
-    </div>
+    </>
   );
 };
 
