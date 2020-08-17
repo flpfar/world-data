@@ -1,0 +1,38 @@
+.CountryDetails {
+  background-color: var(--color-bg-item);
+  width: 80%;
+  margin-top: 3rem;
+  border-radius: 0.4rem;
+  color: var(--color-primary);
+}
+
+.CountryDetails h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.CountryDetails img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: contain;
+}
+
+.DetailsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.DetailsContent strong {
+  margin-right: 0.4rem;
+}
+
+.DetailsContent ul {
+  margin-left: 2rem;
+}
+
+.DetailsContent li {
+  margin-bottom: 0.4rem;
+}

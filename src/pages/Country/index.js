@@ -3,6 +3,7 @@ import { useParams, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import CountryDetails from '../../components/CountryDetails';
 import Navbar from '../../components/Navbar';
+import styles from './styles.module.css';
 
 const Country = () => {
   const { countryName } = useParams();
@@ -27,7 +28,7 @@ const Country = () => {
   return (
     <>
       <Navbar back />
-      <div className="Country">
+      <div className={styles.Country}>
         { notFound && <Redirect to="/Page404" /> }
         { loading ? 'Loading' : <CountryDetails country={country} /> }
       </div>
