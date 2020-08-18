@@ -10,7 +10,7 @@ const CountriesItem = ({ country }) => {
   } = country;
   return (
     <Link to={`/${name}`} className={styles.CountriesItem} title={name}>
-      <img src={flag} alt={name} />
+      <img src={flag} alt={`${name} flag`} />
       <div className={styles.ItemContent}>
         <h4>{name}</h4>
         <p>
