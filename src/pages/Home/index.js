@@ -24,14 +24,16 @@ const Home = () => {
       <Navbar />
       <div className={styles.Home}>
         <div className={styles.FiltersContainer}>
-          <span>Region:</span>
-          <select value={selectedFilter} onChange={handleSelectedFilter}>
-            {continents.map(continent => (
-              <option value={continent} key={continent}>
-                {continent === '' ? 'No continent' : continent}
-              </option>
-            ))}
-          </select>
+          <label htmlFor="selectFilter">
+            <span>Region:</span>
+            <select id="selectFilter" value={selectedFilter} onChange={handleSelectedFilter}>
+              {continents.map(continent => (
+                <option value={continent} key={continent}>
+                  {continent === '' ? 'No continent' : continent}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
         {state.loading
           ? <span className={styles.Loading}>Loading...</span>
