@@ -12,31 +12,41 @@ const CountryDetails = ({ country }) => {
     <div className={styles.CountryDetails}>
       <h1>{name}</h1>
       <div className={styles.DetailsContent}>
-        <img src={flag} alt={name} />
+        <img src={flag} alt={`${name} Flag`} />
         <ul>
           <li>
             <strong>Population:</strong>
-            <NumberFormat value={population} displayType="text" thousandSeparator />
+            { population
+              ? <NumberFormat value={population} displayType="text" thousandSeparator />
+              : <span>N/A</span>}
           </li>
           <li>
             <strong>Area(km²):</strong>
-            <NumberFormat value={area} displayType="text" thousandSeparator />
+            { area
+              ? <NumberFormat value={area} displayType="text" thousandSeparator />
+              : <span>N/A</span>}
           </li>
           <li>
-            <strong>Population Density(pop/km²):</strong>
-            <NumberFormat value={population / area} decimalScale={2} displayType="text" thousandSeparator />
+            { (population && area)
+              ? (
+                <>
+                  <strong>Population Density(pop/km²):</strong>
+                  <NumberFormat value={population / area} decimalScale={2} displayType="text" thousandSeparator />
+                </>
+              )
+              : null}
           </li>
           <li>
             <strong>Capital:</strong>
-            <span>{capital}</span>
+            <span>{capital || 'N/A'}</span>
           </li>
           <li>
             <strong>Region:</strong>
-            <span>{region}</span>
+            <span>{region || 'N/A'}</span>
           </li>
           <li>
             <strong>Subregion:</strong>
-            <span>{subregion}</span>
+            <span>{subregion || 'N/A'}</span>
           </li>
         </ul>
       </div>
