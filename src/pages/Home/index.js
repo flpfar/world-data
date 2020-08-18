@@ -23,21 +23,33 @@ const Home = () => {
     <>
       <Navbar />
       <div className={styles.Home}>
-        <div className={styles.FiltersContainer}>
-          <label htmlFor="selectFilter">
-            <span>Region:</span>
-            <select id="selectFilter" value={selectedFilter} onChange={handleSelectedFilter}>
-              {continents.map(continent => (
-                <option value={continent} key={continent}>
-                  {continent === '' ? 'No continent' : continent}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        {state.loading
-          ? <span className={styles.Loading}>Loading...</span>
-          : <CountriesList countries={state.countries} selectedFilter={selectedFilter} />}
+        { state.error
+          ? (
+            <div className={styles.CenterMessage}>
+              <h2>Something went wrong ;(</h2>
+              <span>{state.error}</span>
+              <span> - Try again later</span>
+            </div>
+          )
+          : (
+            <>
+              <div className={styles.FiltersContainer}>
+                <label htmlFor="selectFilter">
+                  <span>Region:</span>
+                  <select id="selectFilter" value={selectedFilter} onChange={handleSelectedFilter}>
+                    {continents.map(continent => (
+                      <option value={continent} key={continent}>
+                        {continent === '' ? 'No continent' : continent}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+              {state.loading
+                ? <span className={styles.CenterMessage}>Loading...</span>
+                : <CountriesList countries={state.countries} selectedFilter={selectedFilter} />}
+            </>
+          )}
       </div>
     </>
   );
