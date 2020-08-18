@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import CountriesItem from '../../components/CountriesItem';
 
-describe('CountryDetails', () => {
+describe('CountriesItem', () => {
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }

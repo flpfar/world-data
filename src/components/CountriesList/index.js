@@ -20,7 +20,7 @@ const CountriesList = ({ countries, selectedFilter }) => {
         <h1>{selectedFilter === 'All' ? 'World' : selectedFilter }</h1>
         <p>
           <span>Total countries: </span>
-          <strong>
+          <strong data-testid="TotalFilteredCountries">
             {filteredCountries.length}
           </strong>
         </p>
