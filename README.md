@@ -20,7 +20,7 @@ Do you know how many people are in your country? In your region? In the whole wo
 - Redux
 - CSS Modules
 - Jest
-- React-testing
+- React Testing Library
 - Yarn
 
 ## Live Demo
