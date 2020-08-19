@@ -1,0 +1,21 @@
+.Navbar {
+  background-color: #000;
+  height: 4rem;
+  color: var(--color-bg-item);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Navbar img {
+  width: 10rem;
+}
+
+.Navbar a {
+  color: var(--color-bg-item);
+}
+
+.Navbar a + a:hover {
+  opacity: 0.8;
+}

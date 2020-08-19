@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# World Data
 
-## Available Scripts
+> Check info about the World population and details about countries.
 
-In the project directory, you can run:
+![world-screenshot](https://user-images.githubusercontent.com/15898299/90460674-c6bd2b80-e0da-11ea-91f0-7ce4e4ce9f08.png)
 
-### `yarn start`
+Do you know how many people are in your country? In your region? In the whole world? With "World Data", leave the curiosity behind and get all these answers!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- See information about the world population
+- List all countries of the world
+- Filter countries by region
+- Check details about countries
 
-### `yarn test`
+## Built With
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Javascript
+- React
+- Redux
+- CSS Modules
+- Jest
+- React Testing Library
+- Yarn
 
-### `yarn build`
+## Live Demo
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[World Data](https://world-data.vercel.app/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Setup
+- Clone this repository with: `git clone https://github.com/flpfar/world-data.git`
+- Navigate to the project folder `cd world-data`
+- Run `npm install`.
+- Run `npm start`.
+- Navigate to `http://localhost:3000` in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tests
 
-### `yarn eject`
+- Run `npm test`
+- (Optional) Run `npm test -- --verbose` to check test details
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Potential Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Sort by Population or Area
+- Search bar
+- More details about the countries
+- Graphs
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 👤 Author
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Felipe Rosa (@flpfar)
 
-## Learn More
+[Github](https://github.com/flpfar) | [Twitter](https://twitter.com/flpfar) | [Linkedin](https://www.linkedin.com/in/felipe-augusto-rosa)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Source: [Rest Countries API](https://restcountries.eu/)
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Contributions, issues and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page](https://github.com/flpfar/world-data/issues).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Give a ⭐️ if you like this project!

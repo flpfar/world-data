@@ -1,0 +1,39 @@
+.CountryDetails {
+  background-color: var(--color-bg-item);
+  width: 80%;
+  margin-top: 3rem;
+  border-radius: 0.4rem;
+  color: var(--color-primary);
+  padding: 2rem;
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.CountryDetails h1 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.CountryDetails img {
+  max-width: 20rem;
+  object-fit: contain;
+  margin: 2rem 0;
+}
+
+.DetailsContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.DetailsContent strong {
+  margin-right: 0.4rem;
+}
+
+.DetailsContent ul {
+  margin-left: 2rem;
+}
+
+.DetailsContent li {
+  margin-bottom: 0.4rem;
+}

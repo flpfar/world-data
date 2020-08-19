@@ -1,0 +1,23 @@
+.CountriesList header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.CountriesList h1 {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+.CountriesList p + p {
+  margin-top: 0.4rem;
+}
+
+.ListContainer {
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
