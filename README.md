@@ -8,17 +8,19 @@ Do you know how many people are in your country? In your region? In the whole wo
 
 ## Features
 
-- See information about world population
+- See information about the world population
 - List all countries of the world
-- Filter the countries by Region
+- Filter countries by region
 - Check details about countries
 
 ## Built With
 
-- JS ES6
+- Javascript
 - React
 - Redux
 - CSS Modules
+- Jest
+- React-testing
 - Yarn
 
 ## Live Demo
@@ -33,6 +35,9 @@ Do you know how many people are in your country? In your region? In the whole wo
 - Navigate to `http://localhost:3000` in your browser.
 
 ## Tests
+
+- Run `npm test`
+- (Optional) Run `npm test -- --verbose` to check test details
 
 ## Potential Features
 
