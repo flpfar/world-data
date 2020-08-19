@@ -25,7 +25,7 @@ Do you know how many people are in your country? In your region? In the whole wo
 
 ## Live Demo
 
-[World Data](https://worlddata.netlify.app/)
+[World Data](https://world-data.vercel.app/)
 
 ## Setup
 - Clone this repository with: `git clone https://github.com/flpfar/world-data.git`
